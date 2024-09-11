@@ -32,7 +32,7 @@
             label2 = new Label();
             txtCustomerName = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtTicketPrice = new TextBox();
             lstOut = new ListBox();
             btnCalcPrice = new Button();
             btnClear = new Button();
@@ -75,12 +75,12 @@
             label3.TabIndex = 3;
             label3.Text = "Ticket Price";
             // 
-            // textBox1
+            // txtTicketPrice
             // 
-            textBox1.Location = new Point(243, 128);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(229, 23);
-            textBox1.TabIndex = 4;
+            txtTicketPrice.Location = new Point(243, 128);
+            txtTicketPrice.Name = "txtTicketPrice";
+            txtTicketPrice.Size = new Size(229, 23);
+            txtTicketPrice.TabIndex = 4;
             // 
             // lstOut
             // 
@@ -127,7 +127,7 @@
             Controls.Add(btnClear);
             Controls.Add(btnCalcPrice);
             Controls.Add(lstOut);
-            Controls.Add(textBox1);
+            Controls.Add(txtTicketPrice);
             Controls.Add(label3);
             Controls.Add(txtCustomerName);
             Controls.Add(label2);
@@ -146,7 +146,7 @@
         private Label label2;
         private TextBox txtCustomerName;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtTicketPrice;
         private ListBox lstOut;
         private Button btnCalcPrice;
         private Button btnClear;
