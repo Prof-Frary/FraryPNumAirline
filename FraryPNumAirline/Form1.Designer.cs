@@ -99,6 +99,7 @@
             btnCalcPrice.TabIndex = 6;
             btnCalcPrice.Text = "Calculate Total Ticket &Price";
             btnCalcPrice.UseVisualStyleBackColor = true;
+            btnCalcPrice.Click += btnCalcPrice_Click;
             // 
             // btnClear
             // 
@@ -108,6 +109,7 @@
             btnClear.TabIndex = 7;
             btnClear.Text = "&Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnQuit
             // 
@@ -117,6 +119,7 @@
             btnQuit.TabIndex = 8;
             btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
+            btnQuit.Click += btnQuit_Click;
             // 
             // Form1
             // 
