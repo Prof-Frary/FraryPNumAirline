@@ -9,26 +9,32 @@ namespace FraryPNumAirline
 
         private void btnCalcPrice_Click(object sender, EventArgs e)
         {
-            double taxRate = .0875;
-            double price, totalPrice, taxAmount;
+            // Variables should be declared at the beginning of the procedure
+            double AirlineTaxRate = .0875;
+            double FlightPrice, totalFlightPrice, AirlineTaxAmount;
             string AirlineCustName;
 
             //input
-            price = double.Parse(txtTicketPrice.Text);
+            // Parse converts string to double
+            FlightPrice = double.Parse(txtTicketPrice.Text);
+            // it is a good idea to save string input to a variable
             AirlineCustName = txtCustomerName.Text;
 
 
             // Processing
-            taxAmount = price * taxRate;
-            totalPrice = price + taxAmount;
+            AirlineTaxAmount = FlightPrice * AirlineTaxRate;
+            totalFlightPrice = FlightPrice + AirlineTaxAmount;
 
 
             //Output
             lstOut.Items.Add("Customer Name is " + AirlineCustName);
-            lstOut.Items.Add("Price is " + price.ToString("C2"));
-            lstOut.Items.Add("Tax Rate is " + taxRate.ToString("P2"));
-            lstOut.Items.Add("Tax amount is " + taxAmount.ToString("C2"));
-            lstOut.Items.Add("Total Price is " + totalPrice.ToString("C2"));
+            // toString will convert numbers to string C indicates currency (Money) N - number
+            // P - Percentage - Later we will take about D, T & G ( date and time stuff)
+            // a number after P, C and N indicate number of decimeal places
+            lstOut.Items.Add("Price is " + FlightPrice.ToString("C2"));
+            lstOut.Items.Add("Tax Rate is " + AirlineTaxRate.ToString("P2"));
+            lstOut.Items.Add("Tax amount is " + AirlineTaxAmount.ToString("C2"));
+            lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
 
 
             btnClear.Focus();   
@@ -40,11 +46,15 @@ namespace FraryPNumAirline
             txtCustomerName.Clear();
             txtTicketPrice.Clear();
             lstOut.Items.Clear();
+            // focus changes the active control.
+            // So the line below changes the active control to txtCustomer name
             txtCustomerName.Focus();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
+            // this will close the form and end the program..
+            // Note closing a form doesn't always end the program
             this.Close();
         }
     }
