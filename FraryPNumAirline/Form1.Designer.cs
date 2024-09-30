@@ -34,7 +34,7 @@
             label3 = new Label();
             txtTicketPrice = new TextBox();
             lstOut = new ListBox();
-            btnCalcPrice = new Button();
+            btnCalculatePrice = new Button();
             btnClear = new Button();
             btnQuit = new Button();
             SuspendLayout();
@@ -91,15 +91,15 @@
             lstOut.Size = new Size(697, 154);
             lstOut.TabIndex = 5;
             // 
-            // btnCalcPrice
+            // btnCalculatePrice
             // 
-            btnCalcPrice.Location = new Point(65, 368);
-            btnCalcPrice.Name = "btnCalcPrice";
-            btnCalcPrice.Size = new Size(75, 70);
-            btnCalcPrice.TabIndex = 6;
-            btnCalcPrice.Text = "Calculate Total Ticket &Price";
-            btnCalcPrice.UseVisualStyleBackColor = true;
-            btnCalcPrice.Click += btnCalcPrice_Click;
+            btnCalculatePrice.Location = new Point(65, 368);
+            btnCalculatePrice.Name = "btnCalculatePrice";
+            btnCalculatePrice.Size = new Size(75, 70);
+            btnCalculatePrice.TabIndex = 6;
+            btnCalculatePrice.Text = "Calculate Total Ticket &Price";
+            btnCalculatePrice.UseVisualStyleBackColor = true;
+            btnCalculatePrice.Click += btnCalculatePrice_Click;
             // 
             // btnClear
             // 
@@ -128,7 +128,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnQuit);
             Controls.Add(btnClear);
-            Controls.Add(btnCalcPrice);
+            Controls.Add(btnCalculatePrice);
             Controls.Add(lstOut);
             Controls.Add(txtTicketPrice);
             Controls.Add(label3);
@@ -151,7 +151,7 @@
         private Label label3;
         private TextBox txtTicketPrice;
         private ListBox lstOut;
-        private Button btnCalcPrice;
+        private Button btnCalculatePrice;
         private Button btnClear;
         private Button btnQuit;
     }

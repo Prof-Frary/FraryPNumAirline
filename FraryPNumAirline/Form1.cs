@@ -7,7 +7,20 @@ namespace FraryPNumAirline
             InitializeComponent();
         }
 
-        private void btnCalcPrice_Click(object sender, EventArgs e)
+
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtCustomerName.Clear();
+            txtTicketPrice.Clear();
+            lstOut.Items.Clear();
+            // focus changes the active control.
+            // So the line below changes the active control to txtCustomer name
+            txtCustomerName.Focus();
+        }
+
+
+        private void btnCalculatePrice_Click(object sender, EventArgs e)
         {
             // Variables should be declared at the beginning of the procedure
             double AirlineTaxRate = .0875;
@@ -37,18 +50,8 @@ namespace FraryPNumAirline
             lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
 
 
-            btnClear.Focus();   
+            btnClear.Focus();
 
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtCustomerName.Clear();
-            txtTicketPrice.Clear();
-            lstOut.Items.Clear();
-            // focus changes the active control.
-            // So the line below changes the active control to txtCustomer name
-            txtCustomerName.Focus();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
