@@ -37,6 +37,8 @@
             btnCalculatePrice = new Button();
             btnClear = new Button();
             btnQuit = new Button();
+            label4 = new Label();
+            txtNumTickets = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -90,6 +92,7 @@
             lstOut.Name = "lstOut";
             lstOut.Size = new Size(697, 154);
             lstOut.TabIndex = 5;
+            lstOut.TabStop = false;
             // 
             // btnCalculatePrice
             // 
@@ -121,11 +124,29 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(71, 166);
+            label4.Name = "label4";
+            label4.Size = new Size(104, 15);
+            label4.TabIndex = 9;
+            label4.Text = "Number of Tickets";
+            // 
+            // txtNumTickets
+            // 
+            txtNumTickets.Location = new Point(247, 169);
+            txtNumTickets.Name = "txtNumTickets";
+            txtNumTickets.Size = new Size(100, 23);
+            txtNumTickets.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtNumTickets);
+            Controls.Add(label4);
             Controls.Add(btnQuit);
             Controls.Add(btnClear);
             Controls.Add(btnCalculatePrice);
@@ -154,5 +175,7 @@
         private Button btnCalculatePrice;
         private Button btnClear;
         private Button btnQuit;
+        private Label label4;
+        private TextBox txtNumTickets;
     }
 }
