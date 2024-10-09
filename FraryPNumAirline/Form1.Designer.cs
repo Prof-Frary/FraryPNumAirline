@@ -55,7 +55,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(41, 87);
+            label2.Location = new Point(41, 76);
             label2.Name = "label2";
             label2.Size = new Size(131, 15);
             label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(243, 84);
+            txtCustomerName.Location = new Point(243, 73);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(229, 23);
             txtCustomerName.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(65, 128);
+            label3.Location = new Point(65, 115);
             label3.Name = "label3";
             label3.Size = new Size(67, 15);
             label3.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // txtTicketPrice
             // 
-            txtTicketPrice.Location = new Point(243, 128);
+            txtTicketPrice.Location = new Point(243, 115);
             txtTicketPrice.Name = "txtTicketPrice";
             txtTicketPrice.Size = new Size(229, 23);
             txtTicketPrice.TabIndex = 4;
@@ -127,7 +127,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(71, 166);
+            label4.Location = new Point(71, 153);
             label4.Name = "label4";
             label4.Size = new Size(104, 15);
             label4.TabIndex = 9;
@@ -135,7 +135,7 @@
             // 
             // txtNumTickets
             // 
-            txtNumTickets.Location = new Point(247, 169);
+            txtNumTickets.Location = new Point(247, 156);
             txtNumTickets.Name = "txtNumTickets";
             txtNumTickets.Size = new Size(100, 23);
             txtNumTickets.TabIndex = 5;

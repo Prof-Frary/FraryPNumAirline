@@ -23,7 +23,7 @@ namespace FraryPNumAirline
         private void btnCalculatePrice_Click(object sender, EventArgs e)
         {
             // Variables should be declared at the beginning of the procedure
-            double AirlineTaxRate = .0875;
+            double AirlineTaxRate = .08875;
             double FlightPrice, totalFlightPrice, AirlineTaxAmount;
             string AirlineCustName;
             bool PriceValid, NumTickValid;
@@ -52,7 +52,8 @@ namespace FraryPNumAirline
                 lstOut.Items.Add("Tax amount is " + AirlineTaxAmount.ToString("C2"));
                 lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
                 btnClear.Focus();
-            } else
+            } 
+            else
             {
                 if (!PriceValid)
                 {
@@ -68,9 +69,17 @@ namespace FraryPNumAirline
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            // this will close the form and end the program..
-            // Note closing a form doesn't always end the program
-            this.Close();
+            DialogResult ButtonSelected;
+            ButtonSelected = MessageBox.Show(
+                "Do you really want to Quit?", "Exiting...",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (ButtonSelected == DialogResult.Yes)
+            {
+                // this will close the form and end the program..
+                // Note closing a form doesn't always end the program
+                this.Close();
+            }
         }
     }
 }
