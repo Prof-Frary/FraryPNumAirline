@@ -39,7 +39,7 @@ namespace FraryPNumAirline
                 // it is a good idea to save string input to a variable
                 AirlineCustName = txtCustomerName.Text;
                 // Processing
-                AirlineTaxAmount = FlightPrice  * AirlineTaxRate;
+                AirlineTaxAmount = FlightPrice * AirlineTaxRate;
                 totalFlightPrice = (FlightPrice + AirlineTaxAmount) * NumTickets;
                 //Output
                 lstOut.Items.Add("Customer Name is " + AirlineCustName);
@@ -52,7 +52,7 @@ namespace FraryPNumAirline
                 lstOut.Items.Add("Tax amount is " + AirlineTaxAmount.ToString("C2"));
                 lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
                 btnClear.Focus();
-            } 
+            }
             else
             {
                 if (!PriceValid)
@@ -80,6 +80,41 @@ namespace FraryPNumAirline
                 // Note closing a form doesn't always end the program
                 this.Close();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // this makes the checked changed procedure run ( it doesn't run if set in designer)
+            rdoEconomy.Checked = true;
+
+        }
+
+        private void rdoEconomy_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoEconomy.Checked)
+            {
+
+            }
+        }
+
+        private void rdoEconPlus_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoBusinessClass_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoFirstClass_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
