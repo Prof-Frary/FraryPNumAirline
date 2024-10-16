@@ -1,7 +1,15 @@
+using System.Configuration.Internal;
+//Your Name here
 namespace FraryPNumAirline
 {
     public partial class Form1 : Form
     {
+        private string SeatType;
+        const string ECONOMY = "Economy";
+        const string ECONOMY_PLUS = "Economy Plus";
+        const string BUSINESS_CLASS = "Business Class";
+        const string FIRST_CLASS = "First Class";
+
         public Form1()
         {
             InitializeComponent();
@@ -14,9 +22,12 @@ namespace FraryPNumAirline
             txtCustomerName.Clear();
             txtTicketPrice.Clear();
             lstOut.Items.Clear();
+            txtNumTickets.Clear();
             // focus changes the active control.
             // So the line below changes the active control to txtCustomer name
-            txtCustomerName.Focus();
+            //txtCustomerName.Focus();
+            //  rdoEconomy.Focus(); or 
+            rdoEconomy.Checked = true;
         }
 
 
@@ -28,6 +39,8 @@ namespace FraryPNumAirline
             string AirlineCustName;
             bool PriceValid, NumTickValid;
             int NumTickets;
+
+            double SeatTypeFee = 0;
             //input
             // Parse converts string to double
             // FlightPrice = double.Parse(txtTicketPrice.Text);
@@ -36,13 +49,33 @@ namespace FraryPNumAirline
             NumTickValid = int.TryParse(txtNumTickets.Text, out NumTickets);
             if (PriceValid && NumTickValid)
             {
+                switch (SeatType)
+                {
+                    case ECONOMY:
+                        SeatTypeFee = 0;
+                        break;
+                    case ECONOMY_PLUS:
+                        SeatTypeFee = 25;
+                        break;
+                    case BUSINESS_CLASS:
+                        SeatTypeFee = 100;
+                        break;
+                    case FIRST_CLASS:
+                        SeatTypeFee = 500;
+                        break;
+                    default:
+                        lstOut.Items.Add("This should never happen");
+                        break;
+                }
                 // it is a good idea to save string input to a variable
                 AirlineCustName = txtCustomerName.Text;
                 // Processing
-                AirlineTaxAmount = FlightPrice * AirlineTaxRate;
-                totalFlightPrice = (FlightPrice + AirlineTaxAmount) * NumTickets;
+                AirlineTaxAmount = (FlightPrice + SeatTypeFee) * AirlineTaxRate;
+                totalFlightPrice = (FlightPrice + SeatTypeFee + AirlineTaxAmount) * NumTickets;
                 //Output
                 lstOut.Items.Add("Customer Name is " + AirlineCustName);
+                lstOut.Items.Add("Seat Type is " + SeatType);
+                lstOut.Items.Add("Seat Type Fee is " + SeatTypeFee.ToString("C"));
                 // toString will convert numbers to string C indicates currency (Money) N - number
                 // P - Percentage - Later we will take about D, T & G ( date and time stuff)
                 // a number after P, C and N indicate number of decimeal places
@@ -92,29 +125,51 @@ namespace FraryPNumAirline
             // this makes the checked changed procedure run ( it doesn't run if set in designer)
             rdoEconomy.Checked = true;
 
+
         }
 
         private void rdoEconomy_CheckedChanged(object sender, EventArgs e)
         {
             if (rdoEconomy.Checked)
             {
-
+                SeatType = ECONOMY;
             }
         }
 
         private void rdoEconPlus_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rdoEconPlus.Checked)
+            {
+                SeatType = ECONOMY_PLUS;
+            }
         }
 
         private void rdoBusinessClass_CheckedChanged(object sender, EventArgs e)
         {
+            if (rdoBusinessClass.Checked)
+            {
+                SeatType = BUSINESS_CLASS;
+            }
 
         }
 
         private void rdoFirstClass_CheckedChanged(object sender, EventArgs e)
         {
+            if (rdoFirstClass.Checked)
+            {
+                SeatType = FIRST_CLASS;
+            }
+        }
 
+        private void txtCustomerName_DragEnter(object sender, DragEventArgs e)
+        {
+            txtCustomerName.BackColor = Color.Beige;
+
+        }
+
+        private void txtCustomerName_Leave(object sender, EventArgs e)
+        {
+            txtCustomerName.BackColor = SystemColors.Window;
         }
     }
 }

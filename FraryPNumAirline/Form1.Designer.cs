@@ -52,7 +52,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Blue;
-            label1.Location = new Point(290, 9);
+            label1.Location = new Point(240, 9);
             label1.Name = "label1";
             label1.Size = new Size(211, 25);
             label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(63, 126);
+            label2.Location = new Point(33, 125);
             label2.Name = "label2";
             label2.Size = new Size(131, 15);
             label2.TabIndex = 1;
@@ -69,15 +69,17 @@
             // 
             // txtCustomerName
             // 
-            txtCustomerName.Location = new Point(241, 126);
+            txtCustomerName.Location = new Point(213, 125);
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(229, 23);
             txtCustomerName.TabIndex = 2;
+            txtCustomerName.DragEnter += txtCustomerName_DragEnter;
+            txtCustomerName.Leave += txtCustomerName_Leave;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(63, 155);
+            label3.Location = new Point(33, 154);
             label3.Name = "label3";
             label3.Size = new Size(67, 15);
             label3.TabIndex = 3;
@@ -85,7 +87,7 @@
             // 
             // txtTicketPrice
             // 
-            txtTicketPrice.Location = new Point(241, 155);
+            txtTicketPrice.Location = new Point(213, 154);
             txtTicketPrice.Name = "txtTicketPrice";
             txtTicketPrice.Size = new Size(229, 23);
             txtTicketPrice.TabIndex = 4;
@@ -94,15 +96,15 @@
             // 
             lstOut.FormattingEnabled = true;
             lstOut.ItemHeight = 15;
-            lstOut.Location = new Point(52, 208);
+            lstOut.Location = new Point(38, 210);
             lstOut.Name = "lstOut";
-            lstOut.Size = new Size(697, 154);
+            lstOut.Size = new Size(615, 154);
             lstOut.TabIndex = 5;
             lstOut.TabStop = false;
             // 
             // btnCalculatePrice
             // 
-            btnCalculatePrice.Location = new Point(65, 368);
+            btnCalculatePrice.Location = new Point(39, 368);
             btnCalculatePrice.Name = "btnCalculatePrice";
             btnCalculatePrice.Size = new Size(75, 70);
             btnCalculatePrice.TabIndex = 6;
@@ -112,7 +114,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(310, 368);
+            btnClear.Location = new Point(301, 368);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 70);
             btnClear.TabIndex = 7;
@@ -122,7 +124,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(547, 368);
+            btnQuit.Location = new Point(578, 368);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(75, 70);
             btnQuit.TabIndex = 8;
@@ -133,7 +135,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(65, 179);
+            label4.Location = new Point(33, 178);
             label4.Name = "label4";
             label4.Size = new Size(104, 15);
             label4.TabIndex = 9;
@@ -141,7 +143,7 @@
             // 
             // txtNumTickets
             // 
-            txtNumTickets.Location = new Point(241, 182);
+            txtNumTickets.Location = new Point(213, 181);
             txtNumTickets.Name = "txtNumTickets";
             txtNumTickets.Size = new Size(100, 23);
             txtNumTickets.TabIndex = 5;
@@ -152,10 +154,10 @@
             groupBox1.Controls.Add(rdoBusinessClass);
             groupBox1.Controls.Add(rdoEconPlus);
             groupBox1.Controls.Add(rdoEconomy);
-            groupBox1.Location = new Point(52, 50);
+            groupBox1.Location = new Point(36, 49);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(647, 55);
-            groupBox1.TabIndex = 10;
+            groupBox1.Size = new Size(619, 55);
+            groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Seat Type";
             groupBox1.Enter += groupBox1_Enter;
@@ -163,7 +165,7 @@
             // rdoFirstClass
             // 
             rdoFirstClass.AutoSize = true;
-            rdoFirstClass.Location = new Point(479, 19);
+            rdoFirstClass.Location = new Point(504, 19);
             rdoFirstClass.Name = "rdoFirstClass";
             rdoFirstClass.Size = new Size(77, 19);
             rdoFirstClass.TabIndex = 3;
@@ -175,7 +177,7 @@
             // rdoBusinessClass
             // 
             rdoBusinessClass.AutoSize = true;
-            rdoBusinessClass.Location = new Point(297, 19);
+            rdoBusinessClass.Location = new Point(336, 19);
             rdoBusinessClass.Name = "rdoBusinessClass";
             rdoBusinessClass.Size = new Size(100, 19);
             rdoBusinessClass.TabIndex = 2;
@@ -187,7 +189,7 @@
             // rdoEconPlus
             // 
             rdoEconPlus.AutoSize = true;
-            rdoEconPlus.Location = new Point(145, 19);
+            rdoEconPlus.Location = new Point(180, 19);
             rdoEconPlus.Name = "rdoEconPlus";
             rdoEconPlus.Size = new Size(86, 19);
             rdoEconPlus.TabIndex = 1;
@@ -211,7 +213,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(690, 450);
             Controls.Add(groupBox1);
             Controls.Add(txtNumTickets);
             Controls.Add(label4);
