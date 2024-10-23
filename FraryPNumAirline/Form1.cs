@@ -71,6 +71,7 @@ namespace FraryPNumAirline
                         lstOut.Items.Add("This should never happen");
                         break;
                 }
+
                 // it is a good idea to save string input to a variable
                 AirlineCustName = txtCustomerName.Text;
                 // Processing
