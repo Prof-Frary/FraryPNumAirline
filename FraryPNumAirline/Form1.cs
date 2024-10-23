@@ -10,6 +10,8 @@ namespace FraryPNumAirline
         const string BUSINESS_CLASS = "Business Class";
         const string FIRST_CLASS = "First Class";
 
+        private string AirlineTrasactionLog = "AirlineTransLog.txt";
+
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace FraryPNumAirline
             string AirlineCustName;
             bool PriceValid, NumTickValid;
             int NumTickets;
+            // declare the object sw which is an instance of the class StreamWrite
+            StreamWriter sw;
 
             double SeatTypeFee = 0;
             //input
@@ -74,8 +78,10 @@ namespace FraryPNumAirline
                 totalFlightPrice = (FlightPrice + SeatTypeFee + AirlineTaxAmount) * NumTickets;
                 //Output
                 lstOut.Items.Add("Customer Name is " + AirlineCustName);
+                // updated output
                 lstOut.Items.Add("Seat Type is " + SeatType);
                 lstOut.Items.Add("Seat Type Fee is " + SeatTypeFee.ToString("C"));
+
                 // toString will convert numbers to string C indicates currency (Money) N - number
                 // P - Percentage - Later we will take about D, T & G ( date and time stuff)
                 // a number after P, C and N indicate number of decimeal places
@@ -84,6 +90,21 @@ namespace FraryPNumAirline
                 lstOut.Items.Add("Tax Rate is for each ticket is " + AirlineTaxRate.ToString("P2"));
                 lstOut.Items.Add("Tax amount is " + AirlineTaxAmount.ToString("C2"));
                 lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
+                sw = File.AppendText(AirlineTrasactionLog);
+                sw.WriteLine("*********** Beginning of Transaction at "  + 
+                            DateTime.Now.ToString("G") + " **********");
+                sw.WriteLine("Customer Name is " + AirlineCustName);
+                // updated output
+                sw.WriteLine("Seat Type is " + SeatType);
+                sw.WriteLine("Seat Type Fee is " + SeatTypeFee.ToString("C"));
+                sw.WriteLine("Price is " + FlightPrice.ToString("C2"));
+                sw.WriteLine("Number of Tickets Bought is " + NumTickets.ToString("N0"));
+                sw.WriteLine("Tax Rate is for each ticket is " + AirlineTaxRate.ToString("P2"));
+                sw.WriteLine("Tax amount is " + AirlineTaxAmount.ToString("C2"));
+                sw.WriteLine("Total Price is " + totalFlightPrice.ToString("C2"));
+
+                sw.Close();
+
                 btnClear.Focus();
             }
             else
@@ -97,7 +118,15 @@ namespace FraryPNumAirline
                     lstOut.Items.Add("Please enter a numeric entry for number of tickets");
                 }
             }
-
+            /*
+            // THIS IS SAMPLE CODE DONOT PUT THIS PERMANENTLY IN YOU CODE
+            // try it out and then comment it out
+            lstOut.Items.Add(DateTime.Now.ToString("D"));
+            lstOut.Items.Add(DateTime.Now.ToString("d"));
+            lstOut.Items.Add(DateTime.Now.ToString("T"));
+            lstOut.Items.Add(DateTime.Now.ToString("t"));
+            lstOut.Items.Add(DateTime.Now.ToString("G"));
+            */
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -170,6 +199,11 @@ namespace FraryPNumAirline
         private void txtCustomerName_Leave(object sender, EventArgs e)
         {
             txtCustomerName.BackColor = SystemColors.Window;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

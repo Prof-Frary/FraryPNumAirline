@@ -52,11 +52,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Blue;
-            label1.Location = new Point(240, 9);
+            label1.Location = new Point(196, 9);
             label1.Name = "label1";
-            label1.Size = new Size(211, 25);
+            label1.Size = new Size(276, 25);
             label1.TabIndex = 0;
-            label1.Text = "Airline Ticket Payment";
+            label1.Text = "Frary's Airline Ticket Payment";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
