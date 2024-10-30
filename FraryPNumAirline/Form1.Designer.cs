@@ -44,6 +44,7 @@
             rdoBusinessClass = new RadioButton();
             rdoEconPlus = new RadioButton();
             rdoEconomy = new RadioButton();
+            openFileDialog1 = new OpenFileDialog();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -210,6 +211,10 @@
             rdoEconomy.UseVisualStyleBackColor = true;
             rdoEconomy.CheckedChanged += rdoEconomy_CheckedChanged;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,5 +261,6 @@
         private RadioButton rdoBusinessClass;
         private RadioButton rdoEconPlus;
         private RadioButton rdoEconomy;
+        private OpenFileDialog openFileDialog1;
     }
 }

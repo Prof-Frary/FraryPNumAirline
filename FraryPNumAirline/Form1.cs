@@ -9,9 +9,15 @@ namespace FraryPNumAirline
         const string ECONOMY_PLUS = "Economy Plus";
         const string BUSINESS_CLASS = "Business Class";
         const string FIRST_CLASS = "First Class";
+        private double AirlineTaxRate;
+        private double EconomyFee;
+        private double EconomyPlusFee;
+        private double BusinessFee;
+        private double FirstClassFee;
+
 
         private string AirlineTrasactionLog = "AirlineTransLog.txt";
-
+        private string AirlineConfig = "AirlineConfig.txt";
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +42,7 @@ namespace FraryPNumAirline
         private void btnCalculatePrice_Click(object sender, EventArgs e)
         {
             // Variables should be declared at the beginning of the procedure
-            double AirlineTaxRate = .08875;
+            
             double FlightPrice, totalFlightPrice, AirlineTaxAmount;
             string AirlineCustName;
             bool PriceValid, NumTickValid;
@@ -56,16 +62,16 @@ namespace FraryPNumAirline
                 switch (SeatType)
                 {
                     case ECONOMY:
-                        SeatTypeFee = 0;
+                        SeatTypeFee = EconomyFee;
                         break;
                     case ECONOMY_PLUS:
-                        SeatTypeFee = 25;
+                        SeatTypeFee = EconomyPlusFee;
                         break;
                     case BUSINESS_CLASS:
-                        SeatTypeFee = 100;
+                        SeatTypeFee = BusinessFee;
                         break;
                     case FIRST_CLASS:
-                        SeatTypeFee = 500;
+                        SeatTypeFee = FirstClassFee;
                         break;
                     default:
                         lstOut.Items.Add("This should never happen");
@@ -154,6 +160,38 @@ namespace FraryPNumAirline
         {
             // this makes the checked changed procedure run ( it doesn't run if set in designer)
             rdoEconomy.Checked = true;
+            StreamReader reader;
+            bool valValid;
+            bool fileBad = true;
+            do
+            {
+                try
+                {
+                    reader = File.OpenText(AirlineConfig);
+                    fileBad = false;
+                    //skipping validity checks so as not to confuse the input
+                    valValid = double.TryParse(reader.ReadLine(), out AirlineTaxRate);
+
+                    valValid = double.TryParse(reader.ReadLine(), out EconomyFee);
+
+                    valValid = double.TryParse(reader.ReadLine(), out EconomyPlusFee);
+                    valValid = double.TryParse(reader.ReadLine(), out BusinessFee);
+                    valValid = double.TryParse(reader.ReadLine(), out FirstClassFee);
+                    reader.Close();
+                }
+                catch (FileNotFoundException ex)
+                {
+                    MessageBox.Show("The configuation file was not found. Please select a different file \n Error message was: " +
+                        ex.Message
+                        );
+                    openFileDialog1.InitialDirectory = Application.StartupPath;
+                    openFileDialog1.ShowDialog();
+                    //this takes the file the user slected and puts in the variable for the file we need
+                    AirlineConfig = openFileDialog1.FileName;
+
+
+                }
+            } while (fileBad);
 
 
         }

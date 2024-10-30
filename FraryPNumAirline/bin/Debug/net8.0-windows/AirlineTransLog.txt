@@ -65,3 +65,147 @@ Number of Tickets Bought is 45
 Tax Rate is for each ticket is 8.87%
 Tax amount is $40.47
 Total Price is $22,341.15
+*********** Beginning of Transaction at 10/30/2024 10:53:55 AM **********
+Customer Name is fsdfasdg
+Seat Type is Economy Plus
+Seat Type Fee is $25.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $11.09
+Total Price is $136.09
+*********** Beginning of Transaction at 10/30/2024 10:54:13 AM **********
+Customer Name is fsdfasdg
+Seat Type is Economy Plus
+Seat Type Fee is $25.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $11.09
+Total Price is $136.09
+*********** Beginning of Transaction at 10/30/2024 10:54:26 AM **********
+Customer Name is fsdfasdg
+Seat Type is Economy
+Seat Type Fee is $0.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $8.88
+Total Price is $108.88
+*********** Beginning of Transaction at 10/30/2024 10:54:37 AM **********
+Customer Name is fsdfasdg
+Seat Type is Business Class
+Seat Type Fee is $100.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $17.75
+Total Price is $217.75
+*********** Beginning of Transaction at 10/30/2024 10:54:54 AM **********
+Customer Name is fsdfasdg
+Seat Type is First Class
+Seat Type Fee is $500.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $53.25
+Total Price is $653.25
+*********** Beginning of Transaction at 10/30/2024 11:26:57 AM **********
+Customer Name is cngfjhfd
+Seat Type is Economy Plus
+Seat Type Fee is $50.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $13.31
+Total Price is $163.31
+*********** Beginning of Transaction at 10/30/2024 11:37:55 AM **********
+Customer Name is 
+Seat Type is Economy Plus
+Seat Type Fee is $0.00
+Price is $45.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 0.00%
+Tax amount is $0.00
+Total Price is $45.00
+*********** Beginning of Transaction at 10/30/2024 11:37:59 AM **********
+Customer Name is 
+Seat Type is Business Class
+Seat Type Fee is $0.00
+Price is $45.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 0.00%
+Tax amount is $0.00
+Total Price is $45.00
+*********** Beginning of Transaction at 10/30/2024 11:38:04 AM **********
+Customer Name is 
+Seat Type is First Class
+Seat Type Fee is $0.00
+Price is $45.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 0.00%
+Tax amount is $0.00
+Total Price is $45.00
+*********** Beginning of Transaction at 10/30/2024 11:46:33 AM **********
+Customer Name is 
+Seat Type is Economy
+Seat Type Fee is $0.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 0.00%
+Tax amount is $0.00
+Total Price is $100.00
+*********** Beginning of Transaction at 10/30/2024 11:46:38 AM **********
+Customer Name is 
+Seat Type is Economy Plus
+Seat Type Fee is $0.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 0.00%
+Tax amount is $0.00
+Total Price is $100.00
+*********** Beginning of Transaction at 10/30/2024 11:46:46 AM **********
+Customer Name is 
+Seat Type is Business Class
+Seat Type Fee is $0.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 0.00%
+Tax amount is $0.00
+Total Price is $100.00
+*********** Beginning of Transaction at 10/30/2024 11:56:27 AM **********
+Customer Name is hfgdhg
+Seat Type is Economy
+Seat Type Fee is $10.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $9.76
+Total Price is $119.76
+*********** Beginning of Transaction at 10/30/2024 11:56:30 AM **********
+Customer Name is hfgdhg
+Seat Type is Economy Plus
+Seat Type Fee is $50.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $13.31
+Total Price is $163.31
+*********** Beginning of Transaction at 10/30/2024 11:56:34 AM **********
+Customer Name is hfgdhg
+Seat Type is Business Class
+Seat Type Fee is $200.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $26.62
+Total Price is $326.62
+*********** Beginning of Transaction at 10/30/2024 11:56:40 AM **********
+Customer Name is hfgdhg
+Seat Type is First Class
+Seat Type Fee is $1,000.00
+Price is $100.00
+Number of Tickets Bought is 1
+Tax Rate is for each ticket is 8.87%
+Tax amount is $97.62
+Total Price is $1,197.62
