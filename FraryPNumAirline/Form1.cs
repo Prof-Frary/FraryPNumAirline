@@ -9,15 +9,42 @@ namespace FraryPNumAirline
         const string ECONOMY_PLUS = "Economy Plus";
         const string BUSINESS_CLASS = "Business Class";
         const string FIRST_CLASS = "First Class";
-        private double AirlineTaxRate;
-        private double EconomyFee;
-        private double EconomyPlusFee;
-        private double BusinessFee;
-        private double FirstClassFee;
+
+        private double airlineTaxRate;
+        private double economyFee;
+        private double economyPlusFee;
+        private double businessFee;
+        private double firstClassFee;
 
 
         private string AirlineTrasactionLog = "AirlineTransLog.txt";
         private string AirlineConfig = "AirlineConfig.txt";
+
+        public double AirlineTaxRate {
+            get { return airlineTaxRate; }
+            set { airlineTaxRate = value; }
+        }
+        public double EconomyFee
+        {
+            get { return economyFee; }
+            set { economyFee = value; }
+        }
+        public double EconomyPlusFee {
+            get { return economyPlusFee;}
+            set {  economyPlusFee = value; }
+            }
+        public double BusinessFee
+        {
+            get { return businessFee; }
+            set { businessFee = value; }
+        }
+
+        public double FirstClassFee
+        {
+            get { return firstClassFee; }
+            set { firstClassFee = value; }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -43,7 +70,7 @@ namespace FraryPNumAirline
         {
             // Variables should be declared at the beginning of the procedure
             
-            double FlightPrice, totalFlightPrice, AirlineTaxAmount;
+            double FlightPrice, totalFlightPrice, AirlineTaxAmount, subTotal;
             string AirlineCustName;
             bool PriceValid, NumTickValid;
             int NumTickets;
@@ -81,21 +108,24 @@ namespace FraryPNumAirline
                 // it is a good idea to save string input to a variable
                 AirlineCustName = txtCustomerName.Text;
                 // Processing
-                AirlineTaxAmount = (FlightPrice + SeatTypeFee) * AirlineTaxRate;
-                totalFlightPrice = (FlightPrice + SeatTypeFee + AirlineTaxAmount) * NumTickets;
+                subTotal = (FlightPrice + SeatTypeFee) * NumTickets;
+                AirlineTaxAmount = subTotal * AirlineTaxRate;
+                totalFlightPrice = subTotal + AirlineTaxAmount ;
                 //Output
                 lstOut.Items.Add("Customer Name is " + AirlineCustName);
                 // updated output
                 lstOut.Items.Add("Seat Type is " + SeatType);
                 lstOut.Items.Add("Seat Type Fee is " + SeatTypeFee.ToString("C"));
 
+
                 // toString will convert numbers to string C indicates currency (Money) N - number
                 // P - Percentage - Later we will take about D, T & G ( date and time stuff)
                 // a number after P, C and N indicate number of decimeal places
                 lstOut.Items.Add("Price is " + FlightPrice.ToString("C2"));
                 lstOut.Items.Add("Number of Tickets Bought is " + NumTickets.ToString("N0"));
+                lstOut.Items.Add("Subtotal of Tickets is " + subTotal.ToString("C"));
                 lstOut.Items.Add("Tax Rate is for each ticket is " + AirlineTaxRate.ToString("P2"));
-                lstOut.Items.Add("Tax amount is " + AirlineTaxAmount.ToString("C2"));
+                lstOut.Items.Add("Tax amount is for each seat " + AirlineTaxAmount.ToString("C2"));
                 lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
                 sw = File.AppendText(AirlineTrasactionLog);
                 sw.WriteLine("*********** Beginning of Transaction at "  + 
@@ -106,7 +136,7 @@ namespace FraryPNumAirline
                 sw.WriteLine("Seat Type Fee is " + SeatTypeFee.ToString("C"));
                 sw.WriteLine("Price is " + FlightPrice.ToString("C2"));
                 sw.WriteLine("Number of Tickets Bought is " + NumTickets.ToString("N0"));
-                sw.WriteLine("Tax Rate is for each ticket is " + AirlineTaxRate.ToString("P2"));
+                sw.WriteLine("Tax Rate is " + AirlineTaxRate.ToString("P2"));
                 sw.WriteLine("Tax amount is " + AirlineTaxAmount.ToString("C2"));
                 sw.WriteLine("Total Price is " + totalFlightPrice.ToString("C2"));
 
@@ -169,14 +199,24 @@ namespace FraryPNumAirline
                 {
                     reader = File.OpenText(AirlineConfig);
                     fileBad = false;
+                    double tempValue;
                     //skipping validity checks so as not to confuse the input
-                    valValid = double.TryParse(reader.ReadLine(), out AirlineTaxRate);
+                    valValid = double.TryParse(reader.ReadLine(), out tempValue);
+                    // optional error checking could be done here
+                    AirlineTaxRate = tempValue;
 
-                    valValid = double.TryParse(reader.ReadLine(), out EconomyFee);
+                    valValid = double.TryParse(reader.ReadLine(), out tempValue);
+                    EconomyFee = tempValue;
 
-                    valValid = double.TryParse(reader.ReadLine(), out EconomyPlusFee);
-                    valValid = double.TryParse(reader.ReadLine(), out BusinessFee);
-                    valValid = double.TryParse(reader.ReadLine(), out FirstClassFee);
+                    valValid = double.TryParse(reader.ReadLine(), out tempValue);
+                    EconomyPlusFee = tempValue;
+
+                    valValid = double.TryParse(reader.ReadLine(), out tempValue);
+                    BusinessFee = tempValue;
+
+                    valValid = double.TryParse(reader.ReadLine(), out tempValue);
+                    firstClassFee = tempValue;  
+
                     reader.Close();
                 }
                 catch (FileNotFoundException ex)

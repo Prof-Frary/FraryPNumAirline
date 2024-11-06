@@ -209,3 +209,57 @@ Number of Tickets Bought is 1
 Tax Rate is for each ticket is 8.87%
 Tax amount is $97.62
 Total Price is $1,197.62
+*********** Beginning of Transaction at 11/6/2024 11:46:06 AM **********
+Customer Name is sgfgfa
+Seat Type is Economy
+Seat Type Fee is $10.00
+Price is $50.00
+Number of Tickets Bought is 2
+Tax Rate is for each ticket is 8.87%
+Tax amount is $5.32
+Total Price is $130.65
+*********** Beginning of Transaction at 11/6/2024 11:49:42 AM **********
+Customer Name is kmnbbbn
+Seat Type is Economy
+Seat Type Fee is $10.00
+Price is $50.00
+Number of Tickets Bought is 2
+Tax Rate is 8.87%
+Tax amount is $10.65
+Total Price is $70.65
+*********** Beginning of Transaction at 11/6/2024 11:55:36 AM **********
+Customer Name is fksdhksa
+Seat Type is Economy
+Seat Type Fee is $10.00
+Price is $50.00
+Number of Tickets Bought is 2
+Tax Rate is 8.87%
+Tax amount is $10.65
+Total Price is $130.65
+*********** Beginning of Transaction at 11/6/2024 11:56:59 AM **********
+Customer Name is bmnvbcm
+Seat Type is Economy Plus
+Seat Type Fee is $50.00
+Price is $50.00
+Number of Tickets Bought is 2
+Tax Rate is 8.87%
+Tax amount is $17.75
+Total Price is $217.75
+*********** Beginning of Transaction at 11/6/2024 11:57:17 AM **********
+Customer Name is bmnvbcm
+Seat Type is Business Class
+Seat Type Fee is $200.00
+Price is $50.00
+Number of Tickets Bought is 2
+Tax Rate is 8.87%
+Tax amount is $44.38
+Total Price is $544.38
+*********** Beginning of Transaction at 11/6/2024 11:57:33 AM **********
+Customer Name is bmnvbcm
+Seat Type is First Class
+Seat Type Fee is $1,000.00
+Price is $50.00
+Number of Tickets Bought is 2
+Tax Rate is 8.87%
+Tax amount is $186.38
+Total Price is $2,286.38
