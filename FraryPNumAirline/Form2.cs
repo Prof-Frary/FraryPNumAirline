@@ -12,9 +12,21 @@ namespace FraryPNumAirline
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        // this is the constructor
+        public Form2(Form1 form1)
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSetReturn_Click(object sender, EventArgs e)
+        {
+            
+            this.Hide();
         }
     }
 }

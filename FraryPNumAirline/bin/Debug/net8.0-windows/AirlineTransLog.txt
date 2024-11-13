@@ -263,3 +263,12 @@ Number of Tickets Bought is 2
 Tax Rate is 8.87%
 Tax amount is $186.38
 Total Price is $2,286.38
+*********** Beginning of Transaction at 11/13/2024 11:07:15 AM **********
+Customer Name is gfgf
+Seat Type is Economy Plus
+Seat Type Fee is $50.00
+Price is $2.00
+Number of Tickets Bought is 5
+Tax Rate is 8.87%
+Tax amount is $23.07
+Total Price is $283.07

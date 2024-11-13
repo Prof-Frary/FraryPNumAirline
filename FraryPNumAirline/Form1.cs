@@ -15,12 +15,16 @@ namespace FraryPNumAirline
         private double economyPlusFee;
         private double businessFee;
         private double firstClassFee;
-
+        //ica 8
+        //declared the form2 object
+        private Form2 settingForm;
 
         private string AirlineTrasactionLog = "AirlineTransLog.txt";
         private string AirlineConfig = "AirlineConfig.txt";
 
-        public double AirlineTaxRate {
+        // ICA 8 Properties
+        public double AirlineTaxRate
+        {
             get { return airlineTaxRate; }
             set { airlineTaxRate = value; }
         }
@@ -29,10 +33,11 @@ namespace FraryPNumAirline
             get { return economyFee; }
             set { economyFee = value; }
         }
-        public double EconomyPlusFee {
-            get { return economyPlusFee;}
-            set {  economyPlusFee = value; }
-            }
+        public double EconomyPlusFee
+        {
+            get { return economyPlusFee; }
+            set { economyPlusFee = value; }
+        }
         public double BusinessFee
         {
             get { return businessFee; }
@@ -69,7 +74,7 @@ namespace FraryPNumAirline
         private void btnCalculatePrice_Click(object sender, EventArgs e)
         {
             // Variables should be declared at the beginning of the procedure
-            
+
             double FlightPrice, totalFlightPrice, AirlineTaxAmount, subTotal;
             string AirlineCustName;
             bool PriceValid, NumTickValid;
@@ -110,7 +115,7 @@ namespace FraryPNumAirline
                 // Processing
                 subTotal = (FlightPrice + SeatTypeFee) * NumTickets;
                 AirlineTaxAmount = subTotal * AirlineTaxRate;
-                totalFlightPrice = subTotal + AirlineTaxAmount ;
+                totalFlightPrice = subTotal + AirlineTaxAmount;
                 //Output
                 lstOut.Items.Add("Customer Name is " + AirlineCustName);
                 // updated output
@@ -128,7 +133,7 @@ namespace FraryPNumAirline
                 lstOut.Items.Add("Tax amount is for each seat " + AirlineTaxAmount.ToString("C2"));
                 lstOut.Items.Add("Total Price is " + totalFlightPrice.ToString("C2"));
                 sw = File.AppendText(AirlineTrasactionLog);
-                sw.WriteLine("*********** Beginning of Transaction at "  + 
+                sw.WriteLine("*********** Beginning of Transaction at " +
                             DateTime.Now.ToString("G") + " **********");
                 sw.WriteLine("Customer Name is " + AirlineCustName);
                 // updated output
@@ -188,6 +193,10 @@ namespace FraryPNumAirline
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //ICA 8
+            // here we are actualy creating the form2 object
+            settingForm = new Form2(this);
+
             // this makes the checked changed procedure run ( it doesn't run if set in designer)
             rdoEconomy.Checked = true;
             StreamReader reader;
@@ -215,7 +224,7 @@ namespace FraryPNumAirline
                     BusinessFee = tempValue;
 
                     valValid = double.TryParse(reader.ReadLine(), out tempValue);
-                    firstClassFee = tempValue;  
+                    firstClassFee = tempValue;
 
                     reader.Close();
                 }
@@ -283,6 +292,19 @@ namespace FraryPNumAirline
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //ica 8
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            settingForm.txtTaxRate.Text = AirlineTaxRate.ToString();
+            settingForm.txtEconFee.Text = EconomyFee.ToString();    
+            settingForm.txtEconPlusFee.Text = EconomyPlusFee.ToString();
+            settingForm.txtBusinessFee.Text = BusinessFee.ToString();   
+            settingForm.txtFirstClassFee.Text = FirstClassFee.ToString();   
+
+            settingForm.ShowDialog();
         }
     }
 }

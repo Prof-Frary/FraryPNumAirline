@@ -45,7 +45,10 @@
             rdoEconPlus = new RadioButton();
             rdoEconomy = new RadioButton();
             openFileDialog1 = new OpenFileDialog();
+            menuStrip1 = new MenuStrip();
+            mnuSettings = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -215,6 +218,22 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuSettings });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(690, 24);
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // mnuSettings
+            // 
+            mnuSettings.Name = "mnuSettings";
+            mnuSettings.Size = new Size(61, 20);
+            mnuSettings.Text = "&Settings";
+            mnuSettings.Click += settingsToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -232,13 +251,17 @@
             Controls.Add(txtCustomerName);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
             ForeColor = SystemColors.ControlText;
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Your Name Here";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -262,5 +285,7 @@
         private RadioButton rdoEconPlus;
         private RadioButton rdoEconomy;
         private OpenFileDialog openFileDialog1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnuSettings;
     }
 }
