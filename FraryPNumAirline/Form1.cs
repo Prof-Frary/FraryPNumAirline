@@ -20,7 +20,8 @@ namespace FraryPNumAirline
         private Form2 settingForm;
 
         private string AirlineTrasactionLog = "AirlineTransLog.txt";
-        private string AirlineConfig = "AirlineConfig.txt";
+        // making public so that form2 can use it, but it should really be a read only property
+        public string AirlineConfig = "AirlineConfig.txt";
 
         // ICA 8 Properties
         public double AirlineTaxRate
@@ -298,13 +299,17 @@ namespace FraryPNumAirline
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            settingForm.txtTaxRate.Text = AirlineTaxRate.ToString();
-            settingForm.txtEconFee.Text = EconomyFee.ToString();    
-            settingForm.txtEconPlusFee.Text = EconomyPlusFee.ToString();
-            settingForm.txtBusinessFee.Text = BusinessFee.ToString();   
-            settingForm.txtFirstClassFee.Text = FirstClassFee.ToString();   
-
+            setValuesOnSecondForm();
             settingForm.ShowDialog();
+        }
+
+        public void setValuesOnSecondForm()
+        {
+            settingForm.txtTaxRate.Text = AirlineTaxRate.ToString();
+            settingForm.txtEconFee.Text = EconomyFee.ToString();
+            settingForm.txtEconPlusFee.Text = EconomyPlusFee.ToString();
+            settingForm.txtBusinessFee.Text = BusinessFee.ToString();
+            settingForm.txtFirstClassFee.Text = FirstClassFee.ToString();
         }
     }
 }

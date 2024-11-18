@@ -272,3 +272,75 @@ Number of Tickets Bought is 5
 Tax Rate is 8.87%
 Tax amount is $23.07
 Total Price is $283.07
+*********** Beginning of Transaction at 11/18/2024 11:37:58 AM **********
+Customer Name is fdgdfsg
+Seat Type is Economy
+Seat Type Fee is $20.00
+Price is $500.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $46.15
+Total Price is $566.15
+*********** Beginning of Transaction at 11/18/2024 11:38:07 AM **********
+Customer Name is fdgdfsg
+Seat Type is Economy Plus
+Seat Type Fee is $70.00
+Price is $500.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $50.59
+Total Price is $620.59
+*********** Beginning of Transaction at 11/18/2024 11:38:13 AM **********
+Customer Name is fdgdfsg
+Seat Type is Business Class
+Seat Type Fee is $250.00
+Price is $500.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $66.56
+Total Price is $816.56
+*********** Beginning of Transaction at 11/18/2024 11:38:21 AM **********
+Customer Name is fdgdfsg
+Seat Type is First Class
+Seat Type Fee is $1,100.00
+Price is $500.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $142.00
+Total Price is $1,742.00
+*********** Beginning of Transaction at 11/18/2024 11:39:10 AM **********
+Customer Name is gfdgdf
+Seat Type is Economy
+Seat Type Fee is $20.00
+Price is $12.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $2.84
+Total Price is $34.84
+*********** Beginning of Transaction at 11/18/2024 11:39:15 AM **********
+Customer Name is gfdgdf
+Seat Type is Economy Plus
+Seat Type Fee is $70.00
+Price is $12.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $7.28
+Total Price is $89.28
+*********** Beginning of Transaction at 11/18/2024 11:39:19 AM **********
+Customer Name is gfdgdf
+Seat Type is Business Class
+Seat Type Fee is $250.00
+Price is $12.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $23.25
+Total Price is $285.25
+*********** Beginning of Transaction at 11/18/2024 11:39:27 AM **********
+Customer Name is gfdgdf
+Seat Type is First Class
+Seat Type Fee is $1,100.00
+Price is $12.00
+Number of Tickets Bought is 1
+Tax Rate is 8.87%
+Tax amount is $98.69
+Total Price is $1,210.69

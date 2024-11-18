@@ -40,6 +40,7 @@
             btnSetReturn = new Button();
             txtFirstClassFee = new TextBox();
             label6 = new Label();
+            lblErrorMsg = new Label();
             SuspendLayout();
             // 
             // label1
@@ -67,6 +68,7 @@
             txtTaxRate.Name = "txtTaxRate";
             txtTaxRate.Size = new Size(100, 23);
             txtTaxRate.TabIndex = 2;
+            txtTaxRate.Leave += txtTaxRate_Leave;
             // 
             // txtEconFee
             // 
@@ -74,6 +76,7 @@
             txtEconFee.Name = "txtEconFee";
             txtEconFee.Size = new Size(100, 23);
             txtEconFee.TabIndex = 4;
+            txtEconFee.TextChanged += txtEconFee_TextChanged;
             // 
             // label3
             // 
@@ -143,11 +146,22 @@
             label6.TabIndex = 10;
             label6.Text = "First Class Fee";
             // 
+            // lblErrorMsg
+            // 
+            lblErrorMsg.AutoSize = true;
+            lblErrorMsg.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblErrorMsg.ForeColor = Color.Red;
+            lblErrorMsg.Location = new Point(69, 259);
+            lblErrorMsg.Name = "lblErrorMsg";
+            lblErrorMsg.Size = new Size(0, 15);
+            lblErrorMsg.TabIndex = 12;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(320, 317);
+            Controls.Add(lblErrorMsg);
             Controls.Add(txtFirstClassFee);
             Controls.Add(label6);
             Controls.Add(btnSetReturn);
@@ -180,5 +194,6 @@
         public TextBox txtEconPlusFee;
         public TextBox txtBusinessFee;
         public TextBox txtFirstClassFee;
+        private Label lblErrorMsg;
     }
 }
