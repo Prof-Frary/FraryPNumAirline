@@ -311,5 +311,20 @@ namespace FraryPNumAirline
             settingForm.txtBusinessFee.Text = BusinessFee.ToString();
             settingForm.txtFirstClassFee.Text = FirstClassFee.ToString();
         }
+
+        private void btnDisplayLog_Click(object sender, EventArgs e)
+        {
+            const int MAX_LOG_SIZE = 2000;
+            string[] AirlineLogLines = new string[MAX_LOG_SIZE];
+            int numLogLines = 0;
+            StreamReader sr;
+            sr = File.OpenText(AirlineTrasactionLog);
+            while (!sr.EndOfStream)
+            {
+                AirlineLogLines[numLogLines] = sr.ReadLine();
+                numLogLines++;
+            }
+
+        }
     }
 }

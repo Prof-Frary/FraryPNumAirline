@@ -47,6 +47,7 @@
             openFileDialog1 = new OpenFileDialog();
             menuStrip1 = new MenuStrip();
             mnuSettings = new ToolStripMenuItem();
+            btnDisplayLog = new Button();
             groupBox1.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -119,7 +120,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(301, 368);
+            btnClear.Location = new Point(165, 368);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 70);
             btnClear.TabIndex = 7;
@@ -129,7 +130,7 @@
             // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(578, 368);
+            btnQuit.Location = new Point(318, 370);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(75, 70);
             btnQuit.TabIndex = 8;
@@ -234,11 +235,22 @@
             mnuSettings.Text = "&Settings";
             mnuSettings.Click += settingsToolStripMenuItem_Click;
             // 
+            // btnDisplayLog
+            // 
+            btnDisplayLog.Location = new Point(478, 368);
+            btnDisplayLog.Name = "btnDisplayLog";
+            btnDisplayLog.Size = new Size(75, 70);
+            btnDisplayLog.TabIndex = 11;
+            btnDisplayLog.Text = "&Display Log Based on Seat type";
+            btnDisplayLog.UseVisualStyleBackColor = true;
+            btnDisplayLog.Click += btnDisplayLog_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(690, 450);
+            Controls.Add(btnDisplayLog);
             Controls.Add(groupBox1);
             Controls.Add(txtNumTickets);
             Controls.Add(label4);
@@ -287,5 +299,6 @@
         private OpenFileDialog openFileDialog1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem mnuSettings;
+        private Button btnDisplayLog;
     }
 }
