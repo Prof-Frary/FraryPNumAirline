@@ -312,6 +312,7 @@ namespace FraryPNumAirline
             settingForm.txtFirstClassFee.Text = FirstClassFee.ToString();
         }
 
+        
         private void btnDisplayLog_Click(object sender, EventArgs e)
         {
             const int MAX_LOG_SIZE = 2000;
@@ -324,6 +325,29 @@ namespace FraryPNumAirline
                 AirlineLogLines[numLogLines] = sr.ReadLine();
                 numLogLines++;
             }
+            sr.Close();
+            // keep track of begining & end of transaction relative to where
+            // seat type is recorded (For most students this will be the variable
+            // that references their radio button)
+            int begTrans = -2;
+            int endTrans = 6;
+
+            for (int i=0; i < numLogLines; i++)
+            {
+                if (AirlineLogLines[i] == "Seat Type is " + SeatType) {
+                    // Some of you could use  AirlineLogLines[i].Contains(SeatType)
+
+                    for (int j=i+begTrans;  j<=i+endTrans; j++) {
+                        lstOut.Items.Add(AirlineLogLines[j]);
+                    
+                    }
+
+
+                }
+
+            }
+
+
 
         }
     }

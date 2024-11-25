@@ -1,25 +1,3 @@
-Price is $56.00
-Number of Tickets Bought is 4
-Tax Rate is for each ticket is 8.87%
-Tax amount is $4.97
-Total Price is $243.88
-Customer Name is vcbvcxbvc
-Seat Type is Economy
-Seat Type Fee is $0.00
-Price is $100.00
-Number of Tickets Bought is 34
-Tax Rate is for each ticket is 8.87%
-Tax amount is $8.88
-Total Price is $3,701.75
-*********** Beginning of Transaction **********
-Customer Name is cvxvncx
-Seat Type is Economy
-Seat Type Fee is $0.00
-Price is $670.00
-Number of Tickets Bought is 3
-Tax Rate is for each ticket is 8.87%
-Tax amount is $59.46
-Total Price is $2,188.39
 *********** Beginning of Transaction **********
 Customer Name is hbbvcxb
 Seat Type is Economy Plus
