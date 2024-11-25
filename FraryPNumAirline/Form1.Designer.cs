@@ -160,7 +160,7 @@
             groupBox1.Controls.Add(rdoBusinessClass);
             groupBox1.Controls.Add(rdoEconPlus);
             groupBox1.Controls.Add(rdoEconomy);
-            groupBox1.Location = new Point(36, 49);
+            groupBox1.Location = new Point(38, 37);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(619, 55);
             groupBox1.TabIndex = 0;

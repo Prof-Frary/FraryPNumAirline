@@ -111,6 +111,7 @@ namespace FraryPNumAirline
                         break;
                 }
 
+
                 // it is a good idea to save string input to a variable
                 AirlineCustName = txtCustomerName.Text;
                 // Processing
